@@ -7,9 +7,9 @@ const app = express()
 
 app.use(express.json())
 
-app.listen(PORT, () => console.log('zbs'));
+app.listen(PORT, () => console.log('Server is working on port ' + PORT));
 
-let db = new sqlite3.Database('./db.db', (err) => {
+let db = new sqlite3.Database('../db.db', (err) => {
     if (err) {
         console.error(err.message);
     }
